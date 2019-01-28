@@ -5,17 +5,17 @@ A web version of an AI based on the idea by code bullet
 ### Installation
 
 ```
-npm install
+yarn
 ```
 
 ### Start Dev Server
 
 ```
-npm start
+yarn start
 ```
 
 ### Build Prod Version
 
 ```
-npm run build
+yarn run build
 ```
