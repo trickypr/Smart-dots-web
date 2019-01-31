@@ -18,6 +18,10 @@ class Vector {
       this.y = limit
     }
   }
+
+  copy() {
+    return new Vector(this.x, this.y)
+  }
 }
 
 export default Vector;
