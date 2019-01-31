@@ -31,10 +31,20 @@ export default class Dot {
   // -----------------------------------------------------------------------------
   // Display
   draw(ctx) {
+    if (this.isBest) {
+      ctx.fillStyle = '#00ff00'
+      ctx.strokeStyle = '#00ff00'
+    }
+
     ctx.beginPath()
     ctx.arc(this.pos.x, this.pos.y, 4, 0, 2 * Math.PI)
     ctx.stroke()
     ctx.fill()
+
+    if (this.isBest) {
+      ctx.fillStyle = '#000000'
+      ctx.strokeStyle = '#000000'
+    }
   }
 
   // -----------------------------------------------------------------------------
@@ -69,7 +79,7 @@ export default class Dot {
   // Fitness Function
   calculateFitness() {
     if (this.reachedGoal) {
-      this.fitness = 1.0 / 16.0 + 10000.0 / (this.brain.step * this.brain.step);
+      this.fitness = 1.0 / 16 + 10000 / (this.brain.step * this.brain.step);
     } else {
       const distanceToGoal = dist(this.pos.x, this.pos.y, this.goalPos.x, this.goalPos.y);
       this.fitness = 1.0 / (distanceToGoal * distanceToGoal);
