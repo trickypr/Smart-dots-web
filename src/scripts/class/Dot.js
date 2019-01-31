@@ -12,7 +12,7 @@ export default class Dot {
     this.goalPos = goalPos;
 
     // Position, velosity, accseleration
-    this.pos = new Vector(screenSquareSize / 2, screenSquareSize - (10 * window.devicePixelRatio))
+    this.pos = new Vector(screenSquareSize / 2, screenSquareSize - 10)
     this.vel = new Vector(0, 0)
     this.acc = new Vector(0, 0)
 
@@ -59,6 +59,8 @@ export default class Dot {
         this.dead = true
       } else if (dist(this.pos.x, this.pos.y, this.goalPos.x, this.goalPos.y) < 5) {
         this.reachedGoal = true
+      } else if (this.pos.x < 600 && this.pos.y < 310 && this.pos.x > 0 && this.pos.y > 300) {
+        this.dead = true;
       }
     }
   }

@@ -15,19 +15,16 @@ c = document.getElementById('canvas');
 ctx = c.getContext('2d');
 
 // Add Retina Support
-if (window.devicePixelRatio) {
-  // grab the width and height from canvas
-  var height = size
-  var width = size
+/*if (window.devicePixelRatio) {
   // reset the canvas width and height with window.devicePixelRatio applied
-  canvas.setAttribute('width', Math.round(width * window.devicePixelRatio));
-  canvas.setAttribute('height', Math.round(height * window.devicePixelRatio));
+  canvas.setAttribute('width', Math.round(size * window.devicePixelRatio));
+  canvas.setAttribute('height', Math.round(size * window.devicePixelRatio));
   // force the canvas back to the original size using css
-  canvas.style.width = width + "px";
-  canvas.style.height = height + "px";
+  canvas.style.width = size + "px";
+  canvas.style.height = size + "px";
   // set CreateJS to render scaled
   ctx.scaleX = ctx.scaleY = window.devicePixelRatio;
-}
+}*/
 
 goal = new Goal(size / 2, 20);
 
