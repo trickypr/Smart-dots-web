@@ -122,4 +122,4 @@ var o,e=arguments[3];!function(n){var r="object"==typeof exports&&exports&&!expo
 },{"./Dot":"JIrJ","pixi.js":"wbEC","../constants":"kxCl"}],"LQOA":[function(require,module,exports) {
 "use strict";var e=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(exports,"__esModule",{value:!0});var t=require("pixi.js"),i=require("./constants"),s=e(require("./classes/Goal")),a=e(require("./classes/Population")),l=new t.Application({resolution:4,width:i.size,height:i.size}),u=l.view;u.style.width=i.size+"px",u.style.height=i.size+"px",document.body.appendChild(u);var d=new s.default(5,i.size/2,20),r=new a.default(d);l.stage.addChild(d),l.stage.addChild(r);var o=function e(){r.allDotsDead()?(r.calculateFitness(),r.naturalSelection(),r.mutate(),r.addAll(l)):r.update(),setTimeout(e,0)};setTimeout(o,1);
 },{"pixi.js":"wbEC","./constants":"kxCl","./classes/Goal":"pYzd","./classes/Population":"VeP5"}]},{},["LQOA"], null)
-//# sourceMappingURL=/ts.8c3e56b5.js.map
+//# sourceMappingURL=ts.8c3e56b5.js.map
