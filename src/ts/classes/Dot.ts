@@ -1,8 +1,8 @@
 import { Graphics } from 'pixi.js'
-import { size, brainSize, dotSize } from './constants'
-import { dist } from './utils'
-import Goal from './goal'
-import Vector from './Vector'
+import { size, brainSize, dotSize } from '../constants'
+import { dist } from '../utils/utils'
+import Goal from './Goal'
+import Vector from '../utils/Vector'
 import Brain from './Brain'
 
 export default class Dot extends Graphics {
@@ -45,7 +45,6 @@ export default class Dot extends Graphics {
 
       else if (dist(this.pos.x, this.pos.y, this.goal.x, this.goal.y) < 5) this.reachedGoal = true
 
-      // else if (this.pos.x < 600 && this.pos.y < 310 && this.pos.x > 0 && this.pos.y > 300) this.dead = true
     }
   }
 

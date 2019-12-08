@@ -1,7 +1,7 @@
 import Dot from './Dot'
-import Goal from './goal'
+import Goal from './Goal'
 import { Container } from 'pixi.js'
-import { populationSize } from './constants'
+import { populationSize } from '../constants'
 
 export default class Population extends Container {
   dots: Dot[] = []

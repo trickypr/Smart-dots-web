@@ -1,8 +1,8 @@
 import {
   vectorFromAngle
-} from './utils'
-import Vector from './Vector'
-import { mutationRate } from './constants'
+} from '../utils/utils'
+import Vector from '../utils/Vector'
+import { mutationRate } from '../constants'
 
 export default class Brain {
   size: number

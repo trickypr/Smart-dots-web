@@ -1,7 +1,7 @@
 import { Application } from 'pixi.js'
-import { size, populationSize } from './constants'
-import Goal from './goal'
-import Population from './population'
+import { size } from './constants'
+import Goal from './classes/Goal'
+import Population from './classes/Population'
 
 let app = new Application({
   resolution: 4,
